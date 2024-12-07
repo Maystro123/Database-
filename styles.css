@@ -1,3 +1,49 @@
+/* styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+    text-align: center; /* Centrer le texte */
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 20px; /* Espacement en bas du titre */
+}
+
+a {
+    display: inline-block; /* Pour que les liens soient des blocs */
+    margin: 10px; /* Espacement autour des liens */
+    padding: 10px 20px; /* Espacement intérieur */
+    background-color: #007bff; /* Couleur de fond des liens */
+    color: #fff; /* Couleur du texte */
+    text-decoration: none; /* Supprimer le soulignement */
+    border-radius: 5px; /* Coins arrondis */
+    transition: background-color 0.3s; /* Transition pour l'effet hover */
+}
+
+a:hover {
+    background-color: #0056b3; /* Couleur de fond au survol */
+}
+
+.notification {
+    display: none; /* Masqué par défaut */
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    color: #fff;
+}
+
+.notification.success {
+    background-color: #5cb85c; /* Vert */
+}
+
+.notification.error {
+    background-color: #d9534f; /* Rouge */
+}
+
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
@@ -52,4 +98,4 @@ button:hover {
 
 .notification.error {
     background-color: #d9534f; /* Rouge */
-}
+    }
